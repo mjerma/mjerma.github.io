@@ -1,0 +1,296 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Jost", sans-serif;
+}
+/* # Navbar */
+nav {
+    background-color: #263069;
+}
+
+div.vr {
+    height: 25px;
+    align-self: center;
+}
+
+/* # Hero Section */
+#home {
+    width: 100%;
+    height: 65vh;
+    background: #263069;
+  }
+  
+  #home .container {
+    padding-top: 70px;
+  }
+  
+  #home h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  #home h2 {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  
+  #home .animated {
+    animation: up-down 1.9s ease-in-out infinite alternate-reverse both;
+  }
+  
+  @media (max-width: 991px) {
+    #home {
+      height: 100vh;
+      text-align: center;
+    }
+  
+    #home .animated {
+      -webkit-animation: none;
+      animation: none;
+    }
+    
+    #home .hero-img-container {
+      margin-left: 0 !important;
+      padding-bottom: 30px;
+    }
+
+    #home .hero-img {
+      text-align: center;
+    }
+  
+    #home .hero-img img {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #home h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  
+    #home .hero-img img {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    #home .hero-img img {
+      width: 80%;
+    }
+  
+    #home .btn-reserve {
+      font-size: 16px;
+      padding: 10px 24px 11px 24px;
+    }
+  }
+  
+  @-webkit-keyframes up-down {
+    0% {
+      transform: translateY(8px);
+    }
+  
+    100% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  @keyframes up-down {
+    0% {
+      transform: translateY(8px);
+    }
+  
+    100% {
+      transform: translateY(-8px);
+    }
+  }
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.card-content {
+    padding: 50px 35px;
+}
+
+.card {
+    box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
+    border: 0;
+    margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Payment
+--------------------------------------------------------------*/
+#payment {
+  background-color: #f3f5fa;
+}
+
+#payment img {
+    max-height: 80px; 
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+.contact .info {
+    border-top: 3px solid #263069;
+    border-bottom: 3px solid #263069;
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact .info span {
+    font-size: 20px;
+    color: #263069;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #e7f5fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #37517e;
+  }
+  
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: #6182ba;
+  }
+
+  .contact .info p:last-child {
+    margin-bottom: 20px;
+  }
+  
+  .contact .info .email p {
+    padding-top: 5px;
+  }
+
+  
+  .contact .info .email:hover span,
+  .contact .info .address:hover span,
+  .contact .info .phone:hover span {
+    background: #263069;
+    color: #fff;
+  }
+  
+  .contact .php-email-form {
+    width: 100%;
+    border-top: 3px solid #263069;
+    border-bottom: 3px solid #263069;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .contact .php-email-form .form-group {
+    padding-bottom: 8px;
+  }
+  
+  .contact .php-email-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact .php-email-form label {
+    padding-bottom: 8px;
+  }
+  
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .contact .php-email-form input {
+    height: 44px;
+  }
+  
+  .contact .php-email-form textarea {
+    padding: 10px 12px;
+  }
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery-item {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.table-div{
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.table tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.table th:last-child {
+  text-align: end;
+  padding-right: 30px;
+}
+
+.table tr > td:last-child {
+  text-align: end;
+  padding-right: 30px;
+}
+
+@media (min-width: 1400px){
+  #pricing .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 990px) {
+  .vr {
+    display: none;
+  }
+}
+
+  
