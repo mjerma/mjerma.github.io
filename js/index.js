@@ -10,3 +10,8 @@ $(window).scroll(function() {
     'resizeDuration': 200,
     'wrapAround': true
   })
+
+
+    function redirect() {
+        window.location.href= "index.html";  
+      }
