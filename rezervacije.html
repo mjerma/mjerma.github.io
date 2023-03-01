@@ -72,23 +72,23 @@
       <div class="contact-image">
         <img src="images/logo-black.png" height="150px"/>
       </div>
-      <form method="post" class="">
+      <form action="izracun.html" method="get" class="">
         <h3 class="text-center">Rezervacija</h3>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <span>Datum dolaska</span>
-              <input type="date" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+              <input type="date" name="arrivalDate" class="form-control" value="" />
             </div>
             <div class="form-group">
               <span>Datum odlaska</span>
-              <input type="date" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+              <input type="date" name="departureDate" class="form-control" value="" />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="sel1">Vrijeme dolaska:</label>
-              <select class="form-control" id="sel1">
+              <select class="form-control" name="arrivalTime" id="sel1">
                 <option>00</option>
                 <option>01</option>
                 <option>02</option>
@@ -117,7 +117,7 @@
             </div> 
             <div class="form-group">
               <label for="sel1">Vrijeme odlaska:</label>
-              <select class="form-control" id="sel1">
+              <select class="form-control" id="sel1" name="departureTime">
                 <option>00</option>
                 <option>01</option>
                 <option>02</option>
@@ -146,7 +146,7 @@
             </div> 
           </div>
           <div class="row mt-3">
-            <a href="izracun.html" class="btn btn-reserve btn-primary py-2 px-3 btnSubmit">Izračun cijene</a>
+            <input type="submit" class="btn btn-reserve btn-primary py-2 px-3 btnSubmit" value="Izračun cijene"/>
           </div>
         </div>
       </form>
