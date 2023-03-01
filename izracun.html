@@ -57,8 +57,8 @@
                   HR
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">HR</a></li>
-                  <li><a class="dropdown-item" href="#">ENG</a></li>
+                  <li><a class="dropdown-item" href="index.html">HR</a></li>
+                  <li><a class="dropdown-item" href="en/index.html">ENG</a></li>
                 </ul>
               </li>
             </ul>
@@ -67,21 +67,21 @@
       </div>
     </nav>
   </header>
-  <section id="calculator" class="py-5">
+  <section id="calculator" class="pt-5">
     <div class="container text-center">
-      <div class="section-title pb-4">
-        <h2 class="pb-2">Plaćanje</h2>
-        <p> Dolazak na parking: <span id="arrivalDate">N/A</span> <span id="arrivalTime">N/A</span>:00</p>
-        <p> Odlazak sa parkinga: <span id="departureDate">N/A</span> <span id="departureTime">N/A</span>:00</p>
-        <p> Cijena: <span id="price">0</span> €</p>
+      <div class="section-title pb-4 text-center">
+        <h2 class="pb-2">Izračun cijene parkinga</h2>
+        <div class="row justify-content-center pt-1">
+          <div class="calcContent col-md-3 col-sm-5 text-start">
+            <p><b>Dolazak na parking: </b><span id="arrivalDate">N/A</span>, <span id="arrivalTime">N/A</span>:00</p>
+            <p><b>Odlazak sa parkinga: </b><span id="departureDate">N/A</span>, <span id="departureTime">N/A</span>:00</p>
+            <p><b>Cijena: </b><span id="price">0</span> €</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="justify-content-center d-flex">
-
-    </div>
-    </div>
   </section>
-  <section id="contact" class="contact py-5">
+  <section id="contactReservation" class="contact py-5">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title text-center pb-5">
@@ -145,7 +145,7 @@
               <textarea class="form-control" name="message" rows="10" required></textarea>
             </div>
             <div class="text-center"><button class="btn btn-primary py-3 px-3 rounded-pill" type="submit">Pošalji
-                formular</button></div>
+                upit</button></div>
           </form>
         </div>
 
@@ -153,70 +153,7 @@
 
     </div>
   </section>
-  <script>
-
-
-    // Get param data from url
-    let params = new URLSearchParams(location.search);
-    let arrivalDate = params.get('arrivalDate');
-    let departureDate = params.get('departureDate');
-    let arrivalTime = params.get('arrivalTime');
-    let departureTime = params.get('departureTime');
-
-    document.getElementById("arrivalDate").innerHTML = arrivalDate;
-    document.getElementById("arrivalTime").innerHTML = arrivalTime;
-    document.getElementById("departureDate").innerHTML = departureDate;
-    document.getElementById("departureTime").innerHTML = departureTime;
-
-    function getDateTime(date, timeHour) {
-      let timeString = timeHour + ':00:00';
-      let result = new Date(date + ' ' + timeString);
-      return result;
-    }
-
-    function treatAsUTC(datetime) {
-      datetime.setMinutes(datetime.getMinutes() - datetime.getTimezoneOffset());
-      return datetime;
-    }
-
-    function daysBetween(startDate, startHour, endDate, endHour) {
-      let millisecondsPerDay = 24 * 60 * 60 * 1000;
-      return (treatAsUTC(getDateTime(endDate, endHour)) - treatAsUTC(getDateTime(startDate, startHour))) / millisecondsPerDay;
-    }
-
-    // calculate number of days between two dates
-    let numOfDaysFloat = daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
-    let decimal = numOfDaysFloat - Math.floor(numOfDaysFloat);
-
-    if (decimal > 0.08334) {
-      numOfDaysFloat += 1;
-    };
-    let numOfDays = Math.floor(numOfDaysFloat)
-    let price = 0;
-
-    if (numOfDays === 1) {
-      price = 12;
-    }
-    if (numOfDays > 1 && numOfDays < 8) {
-      price = 12 + (numOfDays - 1) * 5;
-    }
-    if (numOfDays === 8) {
-      price = 45;
-    }
-    if (numOfDays > 8) {
-      price = 45 + (numOfDays - 8) * 5;
-    }
-
-    let arrivalDateTime = getDateTime(arrivalDate, arrivalTime);
-    let departureDateTime = getDateTime(departureDate, departureTime);
-
-    if (arrivalDateTime < new Date() || arrivalDateTime >= departureDateTime) {
-      price = 0;
-    }
-
-    document.getElementById("price").innerHTML = price;
-
-  </script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>
