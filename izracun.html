@@ -196,7 +196,7 @@ function daysBetween(startDate, startHour, endDate, endHour) {
     var millisecondsPerDay = 24 * 60 * 60 * 1000;
     return (treatAsUTC(endDate, endHour) - treatAsUTC(startDate, startHour)) / millisecondsPerDay;
 }
-// alert(daysBetween(arrivalDate, arrivalTime, departureDate, departureTime));
+daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
 
 // calculate number of days between two dates
 // let numOfDaysFloat = daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
