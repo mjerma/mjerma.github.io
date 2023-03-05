@@ -28,6 +28,7 @@ function daysBetween(startDate, startHour, endDate, endHour) {
 
 // calculate number of days between two dates
 let numOfDaysFloat = daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
+alert(numOfDaysFloat);
 let decimal = numOfDaysFloat - Math.floor(numOfDaysFloat);
 
 if (decimal > 0.08334) {
