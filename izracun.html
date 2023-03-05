@@ -192,7 +192,7 @@ function daysBetween(startDate, endDate) {
     var millisecondsPerDay = 24 * 60 * 60 * 1000;
     return (treatAsBTC(endDate) - treatAsBTC(startDate)) / millisecondsPerDay;
 }
-alert(arrivalDate, departureDate);
+alert(daysBetween(arrivalDate, departureDate));
 
 // calculate number of days between two dates
 let numOfDaysFloat = daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
