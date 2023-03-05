@@ -186,7 +186,7 @@ document.getElementById("departureTime").innerHTML = departureTime;
 /// TESTING
 function treatAsUTC(date, hour) {
     let timeString = hour + ':00:00';
-    let result = new Date(date + ' ' + timeString);
+    let result = new Date(date.replace(/-/g, "/") + ' ' + timeString);
     alert(result);
     result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
     return result;
