@@ -187,6 +187,7 @@ document.getElementById("departureTime").innerHTML = departureTime;
 function treatAsUTC(date, hour) {
     let timeString = hour + ':00:00';
     let result = new Date(date + ' ' + timeString);
+    alert(result);
     result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
     return result;
 }
@@ -195,7 +196,7 @@ function daysBetween(startDate, startHour, endDate, endHour) {
     var millisecondsPerDay = 24 * 60 * 60 * 1000;
     return (treatAsUTC(endDate, endHour) - treatAsUTC(startDate, startHour)) / millisecondsPerDay;
 }
-alert(daysBetween(arrivalDate, arrivalTime, departureDate, departureTime));
+// alert(daysBetween(arrivalDate, arrivalTime, departureDate, departureTime));
 
 // calculate number of days between two dates
 // let numOfDaysFloat = daysBetween(arrivalDate, arrivalTime, departureDate, departureTime);
